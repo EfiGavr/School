@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="./css/style_1.css">
+    <script src="./script/script1.js"></script>
+</head>
+
+<body>
+    <div class="includeAll">
+        <div class="allExceptFooter">
+    <header id="main-header">
+        <span id="title-img">
+            <img src="./img/logo.png" alt="Coding Academy">
+        </span>
+        <span id="title-logo">Coding Academy</span>
+    </header>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a class="active" href="Students.html">Students</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="courses.html">Courses</a>
+        <a href="assignments.html">Assignments</a>
+        <a href="extras.html">Extras</a>
+    </nav>
+<br />
+<!-- Main menu for opening the forms for adding and editing students -->
+    <main class="main">
+        <div id="openBtn">
+            <button class="button" onclick="openForm('myForm')">Add Student</button>
+            <p>Add a new student in your platform. You are going to need the student's
+                name, surname and a unique code for each student</p>
+            <hr />
+            <button class="button" onclick="openForm('myForm2')">Edit Student</button>
+            <p>Search and edit a student who is already registered in your platform. You are going to need the student's
+                name, surname or the unique code for each student</p>
+            <hr />
+        </div>
+        <!-- Popup for adding new student -->
+        <div class="loginPopup">
+            <div class="form-popup" id="myForm">
+                <form class="form-container" onsubmit="return allnumeric('pswrd','par')">
+                    <h1>Add new Student</h1>
+                    <label for="firstname"><b>First Name :</b></label>
+                    <input type="text" id="firstNameS" placeholder="Enter First Name" onchange="upperCase('firstNameS')"
+                        name="fistname" required><br />
+                    <br />
+                    <label for="lastname"><b>Last Name :</b></label>
+                    <input type="text" id="lastNameS" placeholder="Enter Last Name" onchange="upperCase('lastNameS')"
+                        name="lastname" required><br />
+                    <br />
+                    <label for="code"><b>Code :</b></label>
+                    <input type="password" id="pswrd" placeholder="Enter Students' Code" name="code" required><br />
+                    <!-- paragraph's text will change if the password is incorrect -->
+                    <p id="par" class="paragraphErrorMessage"></p> 
+                    <button type="submit" id="submitbtn" class="btn">Add Student</button>
+                    <button type="reset" class="btncancel" onclick="closeForm('myForm','par')">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <!-- Popup for editing student -->
+        <div class="loginPopup">
+            <div class="form-popup" id="myForm2">
+                <form class="form-container" onsubmit="return allnumeric('pswrd2', 'par2')">
+                    <h1>Edit Student</h1>
+                    <p>Search and edit student's information by entering the unique student's code</p>
+                    <label for="code"><b>Code :</b></label>
+                    <input type="password" id="pswrd2" placeholder="Enter Student's Code" name="code" required><br />
+                    <p id="par2" class="paragraphErrorMessage"></p>
+                    <button type="submit" class="btn">Find Student</button>
+                    <button type="reset" class="btncancel" onclick="closeForm('myForm2','par2')">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+<!-- Footer with two columns -->
+    <footer>
+        &copy; Copyright 2022 eGabr
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Contact us</h2>
+                <p>Phone Number : 210 11 11 111</p>
+                <p>e-mail : info@coding.gr</p>
+            </div>
+            <div class="column" style="background-color:#bbb;">
+                <h2>Company</h2>
+                <p>The Company</p>
+                <p>Cooperations</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

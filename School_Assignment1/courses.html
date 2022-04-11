@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="./css/style_1.css">
+    <script src="./script/script1.js"></script>
+</head>
+
+<body>
+    <div class="includeAll">
+        <div class="allExceptFooter">
+    <header id="main-header">
+        <span id="title-img">
+            <img src="./img/logo.png" alt="Coding Academy">
+        </span>
+        <span id="title-logo">Coding Academy</span>
+    </header>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Students.html">Students</a>
+        <a href="trainers.html">Trainers</a>
+        <a class="active" href="courses.html">Courses</a>
+        <a href="assignments.html">Assignments</a>
+        <a href="extras.html">Extras</a>
+    </nav>
+    <br />
+    <!-- Main menu for opening the forms for adding and editing students -->
+    <main class="main">
+        <div id="openBtn">
+            <button class="button" onclick="openForm('myForm6')">Add Course</button>
+            <p>Add a new Course in your platform. You are going to need
+                the Course's description and a unique code for each course</p>
+            <hr />
+            <button class="button" onclick="openForm('myForm7')">Edit Course</button>
+            <p>Search a course that is already added in your platform.You are going to need
+                the Course's description and a unique code for each course</p>
+            <hr />
+        </div>
+        <!-- Popup for adding new student -->
+        <div class="loginPopup">
+            <div class="form-popup" id="myForm6">
+                <form class="form-container" onsubmit="return allnumeric('pswrd6','par6')">
+                    <h1>Add new Course</h1>
+                    <label for="Name"><b>Course's Name :</b></label>
+                    <input type="text" id="nameC" placeholder="Enter Description" onchange="upperCase('nameC')"
+                        name="description" required><br />
+                    <br />
+                    <label for="Description"><b>Description :</b></label>
+                    <input type="text" placeholder="Enter Course's Name" onchange="upperCase('nameC')" name="name"
+                        required><br />
+                    <br />
+                    <label for="code"><b>Code :</b></label>
+                    <input type="password" id="pswrd6" placeholder="Enter course's Code" name="code" required><br />
+                    <br />
+                    <!-- paragraph's text will change if the password is incorrect -->
+                    <p id="par6" class="paragraphErrorMessage"></p>
+                    <button type="submit" class="btn">Add Course</button>
+                    <button type="reset" class="btncancel" onclick="closeForm('myForm6','par6')">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <!-- Popup for editing course -->
+        <div class="loginPopup">
+            <div class="form-popup" id="myForm7">
+                <form class="form-container" onsubmit="return allnumeric('pswrd7','par7')">
+                    <h1>Edit Course</h1>
+                    <p>Search and edit course's information by entering the unique course's code</p>
+                    <label for="code"><b>Code :</b></label>
+                    <input type="password" id="pswrd7" placeholder="Enter Course's Code" name="code" required><br />
+                    <p id="par7" class="paragraphErrorMessage"></p>
+                    <button type="submit" class="btn">Find Course</button>
+                    <button type="reset" class="btncancel" onclick="closeForm('myForm7','par7')">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    </div>
+    <!-- Footer with two columns -->
+    <footer>
+        &copy; Copyright 2022 eGabr
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Contact us</h2>
+                <p>Phone Number : 210 11 11 111</p>
+                <p>e-mail : info@coding.gr</p>
+            </div>
+            <div class="column" style="background-color:#bbb;">
+                <h2>Company</h2>
+                <p>The Company</p>
+                <p>Cooperations</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

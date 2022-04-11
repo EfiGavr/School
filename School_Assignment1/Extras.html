@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style_1.css">
+    <script src="./script/script1.js"></script>
+</head>
+
+<body>
+    <div class="includeAll">
+        <div class="allExceptFooter">
+            <header id="main-header">
+                <span id="title-img">
+                    <img src="./img/logo.png" alt="Coding Academy">
+                </span>
+                <span id="title-logo">Coding Academy</span>
+            </header>
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="Students.html">Students</a>
+                <a href="trainers.html">Trainers</a>
+                <a href="courses.html">Courses</a>
+                <a href="assignments.html">Assignments</a>
+                <a class="active" href="extras.html">Extras</a>
+            </nav>
+            <br />
+            <!-- Popup forms with all the requested combinations -->
+            <main class="main">
+                <div class="coursePopup">
+                    <div class="form-popup" id="courseForm1">
+                        <form class="form-container" onsubmit="return allnumeric('pswrd12','par12')">
+                            <h1>Java</h1>
+                            <p>The registered Students in the Course of Java are :</p>
+                            <p>NIKH PSOMA</p>
+                            <p>VASILIKH MPOUBOURI</p>
+                            <p>VAGGELIS PORETSIS</p>
+                            <h2>Whould you like to add more Students to Java course ?</h2>
+                            <label for="firstname"><b>First Name :</b></label>
+                            <input type="text" id="firstNameS" placeholder="Enter First Name"
+                                onchange="upperCase('firstNameS')" name="fistname" required><br />
+                            <br />
+                            <label for="lastname"><b>Last Name :</b></label>
+                            <input type="text" id="lastNameS" placeholder="Enter Last Name"
+                                onchange="upperCase('lastNameS')" name="lastname" required><br />
+                            <br />
+                            <label for="code"><b>Code :</b></label>
+                            <input id="pswrd12" type="password" placeholder="Enter Students' Code" name="code"
+                                required><br />
+                            <br />
+                            <p id="par12" class="paragraphErrorMessage"></p>
+                            <button id="submitbtn" type="submit" class="btn">Add Student</button>
+                            <button type="reset" class="btncancel"
+                                onclick="closeForm('courseForm1','par12')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="coursePopup">
+                    <div class="form-popup" id="courseForm2">
+                        <form class="form-container" onsubmit="return allnumeric('pswrd13','par13')">
+                            <h1>Java</h1>
+                            <p>The registered Trainers in the Course of Java are :</p>
+                            <p>HLIAS PAPADOPOULOS</p>
+                            <p>ELENI ROUTSIA</p>
+                            <p>ALKISTIS TAMPAOGLOU</p>
+                            <h2>Whould you like to add more Trainers to Java course ?</h2>
+                            <label for="firstname"><b>First Name :</b></label>
+                            <input type="text" id="firstNameT" placeholder="Enter First Name"
+                                onchange="upperCase('firstNameT')" name="fistname" required><br />
+                            <br />
+                            <label for="lastname"><b>Last Name :</b></label>
+                            <input type="text" id="lastNameT" placeholder="Enter Last Name"
+                                onchange="upperCase('lastNameT')" name="lastname" required><br />
+                            <br />
+                            <label for="code"><b>Code :</b></label>
+                            <input id="pswrd13" type="password" placeholder="Enter Students' Code" name="code"
+                                required><br />
+                            <br />
+                            <p id="par13" class="paragraphErrorMessage"></p>
+                            <button id="submitbtn" type="submit" class="btn">Add Trainer</button>
+                            <button type="reset" class="btncancel"
+                                onclick="closeForm('courseForm2','par13')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="coursePopup">
+                    <div class="form-popup" id="courseForm3">
+                        <form class="form-container" onsubmit="return allnumeric('pswrd14','par14')">
+                            <h1>Java</h1>
+                            <p>The required assignmentsin the course of Java are :</p>
+                            <p>Assignment Java 1</p>
+                            <p>Assignment Java 1 - part B</p>
+                            <p>Assignment Java 2</p>
+                            <h2>Whould you like to add more Assignments to Java course ?</h2>
+                            <label for="Name"><b>Assignment's Name :</b></label>
+                            <input type="text" id="nameA" placeholder="Enter Description" onchange="upperCase('nameA')"
+                                name="description" required><br />
+                            <br />
+                            <label for="Description"><b>Description :</b></label>
+                            <input type="text" placeholder="Enter Description" name="description" required><br />
+                            <br />
+                            <label for="start"><b>Start Date:</b> </label>
+                            <input type="date" id="start_day" name="start"><br />
+                            <br />
+                            <label for="end"><b>End Date:</b></label>
+                            <input type="date" id="end_day" name="end"><br />
+                            <br />
+                            <label for="code"><b>Code :</b></label>
+                            <input id="pswrd14" type="password" placeholder="Enter Assignment's Code" name="code"
+                                required><br />
+                            <br />
+                            <p id="par14" class="paragraphErrorMessage"></p>
+                            <button id="submitbtn" type="submit" class="btn">Add Assignment</button>
+                            <button type="reset" class="btncancel"
+                                onclick="closeForm('courseForm3','par14')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="coursePopup">
+                    <div class="form-popup" id="courseForm4">
+                        <form class="form-container" onsubmit="return allnumeric('pswrd15','par15')">
+                            <h1>JavaScript</h1>
+                            <p>The registered Students in the Course of JavaScript are :</p>
+                            <p>ERASMIA GIAKOUMMATOU</p>
+                            <p>GIANNA PANTOU</p>
+                            <p>SPYROS ROUTSIAS</p>
+                            <h2>Whould you like to add more Students to JavaScript course ?</h2>
+                            <label for="firstname"><b>First Name :</b></label>
+                            <input type="text" id="firstNameSJS" placeholder="Enter First Name"
+                                onchange="upperCase('firstNameSJS')" name="fistname" required><br />
+                            <br />
+                            <label for="lastname"><b>Last Name :</b></label>
+                            <input type="text" id="lastNameSJS" placeholder="Enter Last Name"
+                                onchange="upperCase('lastNameSJS')" name="lastname" required><br />
+                            <br />
+                            <label for="code"><b>Code :</b></label>
+                            <input id="pswrd15" type="password" placeholder="Enter Students' Code" name="code"
+                                required><br />
+                            <br />
+                            <p id="par15" class="paragraphErrorMessage"></p>
+                            <button id="submitbtn" type="submit" class="btn">Add Student</button>
+                            <button type="reset" class="btncancel"
+                                onclick="closeForm('courseForm4','par15')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="coursePopup">
+                    <div class="form-popup" id="courseForm5">
+                        <form class="form-container" onsubmit="return allnumeric('pswrd16','par16')">
+                            <h1>JavaScript</h1>
+                            <p>The registered Trainers in the Course of JavaScript are :</p>
+                            <p>GIWRGOS KANAKHS</p>
+                            <p>EFTICHIA RONTOU</p>
+                            <p>CRHSTOS TSEKERIS</p>
+                            <h2>Whould you like to add more Trainers to JavaScript course ?</h2>
+                            <label for="firstname"><b>First Name :</b></label>
+                            <input type="text" id="firstNameTJS" placeholder="Enter First Name"
+                                onchange="upperCase('firstNameTJS')" name="fistname" required><br />
+                            <br />
+                            <label for="lastname"><b>Last Name :</b></label>
+                            <input type="text" id="lastNameTJS" placeholder="Enter Last Name"
+                                onchange="upperCase('lastNameTJS')" name="lastname" required><br />
+                            <br />
+                            <label for="code"><b>Code :</b></label>
+                            <input id="pswrd16" type="password" placeholder="Enter Students' Code" name="code"
+                                required><br />
+                            <br />
+                            <p id="par16" class="paragraphErrorMessage"></p>
+                            <button id="submitbtn" type="submit" class="btn">Add Trainer</button>
+                            <button type="reset" class="btncancel"
+                                onclick="closeForm('courseForm5','par16')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="coursePopup">
+                    <div class="form-popup" id="courseForm6">
+                        <form class="form-container" onsubmit="return allnumeric('pswrd17','par17')">
+                            <h1>JavaScripth</h1>
+                            <p>The required assignmentsin the course of JavaScripth are :</p>
+                            <p>Assignment JavaScript 1</p>
+                            <p>Assignment JavaScript 2</p>
+                            <p>Assignment JavaScript 3</p>
+                            <h2>Whould you like to add more Assignments to JavaScript course ?</h2>
+                            <label for="Name"><b>Assignment's Name :</b></label>
+                            <input type="text" id="nameAJS" placeholder="Enter Description"
+                                onchange="upperCase('nameAJS')" name="description" required><br />
+                            <br />
+                            <label for="Description"><b>Description :</b></label>
+                            <input type="text" placeholder="Enter Description" name="description" required><br />
+                            <br />
+                            <label for="start"><b>Start Date:</b> </label>
+                            <input type="date" id="start_day" name="start"><br />
+                            <br />
+                            <label for="end"><b>End Date:</b></label>
+                            <input type="date" id="end_day" name="end"><br />
+                            <br />
+                            <label for="code"><b>Code :</b></label>
+                            <input id="pswrd17" type="password" placeholder="Enter Assignment's Code" name="code"
+                                required><br />
+                            <br />
+                            <p id="par17" class="paragraphErrorMessage"></p>
+                            <button id="submitbtn" type="submit" class="btn">Add Assignment</button>
+                            <button type="reset" class="btncancel"
+                                onclick="closeForm('courseForm6','par17')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="coursePopup">
+                    <div class="form-popup" id="courseForm7">
+                        <form class="form-container" onsubmit="return allnumeric('pswrd18','par18')">
+                            <h1>Python</h1>
+                            <p>The registered Students in the Course of Python are :</p>
+                            <p>ALEKSANDRA EFSTATHOPOULOU</p>
+                            <p>MARIA FOTOGLIDOU</p>
+                            <p>KONSTANTINOS GOLEMIS </p>
+                            <h2>Whould you like to add more Students to Python course ?</h2>
+                            <label for="firstname"><b>First Name :</b></label>
+                            <input type="text" id="firstNameSP" placeholder="Enter First Name"
+                                onchange="upperCase('firstNameSP')" name="fistname" required><br />
+                            <br />
+                            <label for="lastname"><b>Last Name :</b></label>
+                            <input type="text" id="lastNameSP" placeholder="Enter Last Name"
+                                onchange="upperCase('lastNameSP')" name="lastname" required><br />
+                            <br />
+                            <label for="code"><b>Code :</b></label>
+                            <input id="pswrd18" type="password" placeholder="Enter Students' Code" name="code"
+                                required><br />
+                            <br />
+                            <p id="par18" class="paragraphErrorMessage"></p>
+                            <button id="submitbtn" type="submit" class="btn">Add Student</button>
+                            <button type="reset" class="btncancel"
+                                onclick="closeForm('courseForm7','par18')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="coursePopup">
+                    <div class="form-popup" id="courseForm8">
+                        <form class="form-container" onsubmit="return allnumeric('pswrd19','par19')">
+                            <h1>Python</h1>
+                            <p>The registered Trainers in the Course of Python are :</p>
+                            <p>SOFIA KARAGIANNH</p>
+                            <p>KONSTANTINA DIONYSATOU</p>
+                            <p>EFTHYMIOS MOSXOPOULOS</p>
+                            <h2>Whould you like to add more Trainers to Python course ?</h2>
+                            <label for="firstname"><b>First Name :</b></label>
+                            <input type="text" id="firstNameTP" placeholder="Enter First Name"
+                                onchange="upperCase('firstNameTP')" name="fistname" required><br />
+                            <br />
+                            <label for="lastname"><b>Last Name :</b></label>
+                            <input type="text" id="lastNameTP" placeholder="Enter Last Name"
+                                onchange="upperCase('lastNameTP')" name="lastname" required><br />
+                            <br />
+                            <label for="code"><b>Code :</b></label>
+                            <input id="pswrd19" type="password" placeholder="Enter Students' Code" name="code"
+                                required><br />
+                            <br />
+                            <p id="par19" class="paragraphErrorMessage"></p>
+                            <button id="submitbtn" type="submit" class="btn">Add Trainer</button>
+                            <button type="reset" class="btncancel"
+                                onclick="closeForm('courseForm8','par19')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="coursePopup">
+                    <div class="form-popup" id="courseForm9">
+                        <form class="form-container" onsubmit="return allnumeric('pswrd20','par20')">
+                            <h1>Python</h1>
+                            <p>The required assignmentsin the course of Python are :</p>
+                            <p>Assignment Python 1</p>
+                            <p>Assignment Python 2</p>
+                            <p>Assignment Python 3</p>
+                            <p>Assignment Python 4</p>
+                            <h2>Whould you like to add more Assignments to Python course ?</h2>
+                            <label for="Name"><b>Assignment's Name :</b></label>
+                            <input type="text" id="nameAP" placeholder="Enter Description"
+                                onchange="upperCase('nameAP')" name="description" required><br />
+                            <br />
+                            <label for="Description"><b>Description :</b></label>
+                            <input type="text" placeholder="Enter Description" name="description" required><br />
+                            <br />
+                            <label for="start"><b>Start Date:</b> </label>
+                            <input type="date" id="start_day" name="start"><br />
+                            <br />
+                            <label for="end"><b>End Date:</b></label>
+                            <input type="date" id="end_day" name="end"><br />
+                            <br />
+                            <label for="code"><b>Code :</b></label>
+                            <input id="pswrd20" type="password" placeholder="Enter Assignment's Code" name="code"
+                                required><br />
+                            <br />
+                            <p id="par20" class="paragraphErrorMessage"></p>
+                            <button id="submitbtn" type="submit" class="btn">Add Assignment</button>
+                            <button type="reset" class="btncancel"
+                                onclick="closeForm('courseForm9','par20')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Table with all the requested combinations -->
+                <table id="openBtn">
+                    <tr>
+                        <th>Courses</th>
+                        <th>Students per Course</th>
+                        <th>Trainers per Course</th>
+                        <th>Assignments per Course</th>
+                        <th>Assignments per Student per Course</th>
+                    </tr>
+                    <tr>
+                        <td>JAVA</td>
+                        <td><button class="tableButton" type="button"
+                                onclick="openForm('courseForm1')">Students</button></td>
+                        <td><button class="tableButton" type="button"
+                                onclick="openForm('courseForm2')">Trainers</button></td>
+                        <td><button class="tableButton" type="button"
+                                onclick="openForm('courseForm3')">Assignments</button></td>
+                        <td>
+                            <label>Student's Assignment:</label>
+                            <select id="student">
+                                <optgroup label="NIKH PSOMA">
+                                    <option value="" selected disabled hidden>Choose here</option>
+                                    <option>Assignment Java 1</option>
+                                    <option>Assignment Java 1 - part B</option>
+                                </optgroup>
+                                <optgroup label="VASILIKH MPOUBOURI">
+                                    <option>Assignment Java 1</option>
+                                    <option>Assignment Java 1 - part B</option>
+                                    <option>Assignment Java 2</option>
+                                </optgroup>
+                                <optgroup label="VAGGELIS PORETSIS">
+                                    <option>Assignment Java 1</option>
+                                    <option>Assignment Java 1 - part B</option>
+                                    <option>Assignment Java 2</option>
+                                </optgroup>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>JAVASCRIPT</td>
+                        <td><button class="tableButton" type="button"
+                                onclick="openForm('courseForm4')">Students</button></td>
+                        <td><button class="tableButton" type="button"
+                                onclick="openForm('courseForm5')">Trainers</button></td>
+                        <td><button class="tableButton" type="button"
+                                onclick="openForm('courseForm6')">Assignments</button></td>
+                        <td> <label>Student's Assignment:</label>
+                            <select id="student">
+                                <optgroup label="ERASMIA GIAKOUMMATOU">
+                                    <option value="" selected disabled hidden>Choose here</option>
+                                    <option>Assignment JavaScript 1</option>
+                                </optgroup>
+                                <optgroup label="GIANNA PANTOU">
+                                    <option>Assignment JavaScript 1</option>
+                                    <option>Assignment JavaScript 2</option>
+                                    <option>Assignment JavaScript 3</option>
+                                </optgroup>
+                                <optgroup label="SPYROS ROUTSIAS">
+                                    <option>Assignment JavaScript 1</option>
+                                    <option>Assignment JavaScript 2</option>
+                                </optgroup>
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>PYTHON</td>
+                        <td><button class="tableButton" type="button"
+                                onclick="openForm('courseForm7')">Students</button></td>
+                        <td><button class="tableButton" type="button"
+                                onclick="openForm('courseForm8')">Trainers</button></td>
+                        <td><button class="tableButton" type="button"
+                                onclick="openForm('courseForm9')">Assignments</button></td>
+                        <td><label>Student's Assignment:</label>
+                            <select id="student">
+                                <optgroup label="ALEKSANDRA EFSTATHOPOULOU">
+                                    <option value="" selected disabled hidden>Choose here</option>
+                                    <option>Assignment Python 1</option>
+                                    <option>Assignment Python 2</option>
+                                    <option>Assignment Python 3</option>
+                                    <option>Assignment Python 4</option>
+                                </optgroup>
+                                <optgroup label="MARIA FOTOGLIDOU">
+                                    <option>Assignment Python 1</option>
+                                    <option>Assignment Python 2</option>
+                                </optgroup>
+                                <optgroup label="KONSTANTINOS GOLEMIS">
+                                    <option>Assignment Python 1</option>
+                                    <option>Assignment Python 2</option>
+                                    <option>Assignment Python 3</option>
+                                </optgroup>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </main>
+        </div>
+        <!-- Footer with two columns -->
+        <footer>
+            &copy; Copyright 2022 eGabr
+            <div class="row">
+                <div class="column" style="background-color:#aaa;">
+                    <h2>Contact us</h2>
+                    <p>Phone Number : 210 11 11 111</p>
+                    <p>e-mail : info@coding.gr</p>
+                </div>
+                <div class="column" style="background-color:#bbb;">
+                    <h2>Company</h2>
+                    <p>The Company</p>
+                    <p>Cooperations</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

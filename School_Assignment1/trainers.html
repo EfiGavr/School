@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainers</title>
+    <link rel="stylesheet" href="./css/style_1.css">
+    <script src="./script/script1.js"></script>
+</head>
+
+<body>
+    <div class="includeAll">
+        <div class="allExceptFooter">
+            <header id="main-header">
+                <span id="title-img">
+                    <img src="./img/logo.png" alt="Coding Academy">
+                </span>
+                <span id="title-logo">Coding Academy</span>
+            </header>
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="Students.html">Students</a>
+                <a class="active" href="trainers.html">Trainers</a>
+                <a href="courses.html">Courses</a>
+                <a href="assignments.html">Assignments</a>
+                <a href="extras.html">Extras</a>
+            </nav>
+            <br />
+            <main class="main">
+                <div id="openBtn">
+                    <button class="button" onclick="openForm('myForm3')">Add Trainer</button>
+                    <p>Add a new tariner in your platform. You are going to need the trainer's
+                        name, surname and a unique code for each trainer</p>
+                    <hr />
+                    <button class="button" onclick="openForm('myForm4')">Edit trainer</button>
+                    <p>Search and edit a trainer who is already registered in your platform.
+                        You are going to need the unique code for each trainer</p>
+                    <hr />
+                </div>
+    <!-- Main menu for opening the forms for adding and editing trainers -->
+    <div class="loginPopup">
+                    <div class="form-popup" id="myForm3">
+                        <form class="form-container" onsubmit="return allnumeric('pswrd3','par3')">
+                            <h1>Add new Trainer</h1>
+
+                            <label for="firstname"><b>First Name :</b></label>
+                            <input type="text" id="firstNameT" placeholder="Enter First Name"
+                                onchange="upperCase('firstNameT')" name="fistname" required><br />
+                            <br />
+                            <label for="lastname"><b>Last Name :</b></label>
+                            <input type="text" id="lastNameT" placeholder="Enter Last Name"
+                                onchange="upperCase('lastNameT')" name="lastname" required><br />
+                            <br />
+                            <label for="code"><b>Code :</b></label>
+                            <input type="password" id="pswrd3" placeholder="Enter trainer's Code" name="code"
+                                required><br />
+                            <br />
+                             <!-- paragraph's text will change if the password is incorrect -->
+                            <p id="par3" class="paragraphErrorMessage"></p>
+                            <button type="submit" class="btn">Add Trainer</button>
+                            <button type="reset" class="btncancel" onclick="closeForm('myForm3','par3')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                 <!-- Popup for trainer -->
+                <div class="loginPopup">
+                    <div class="form-popup" id="myForm4">
+                        <form class="form-container" onsubmit="return allnumeric('pswrd4','par4')">
+                            <h1>Edit Trainer</h1>
+                            <p>Search and edit trainer's information by entering the unique trainer's code</p>
+                            <label for="code"><b>Code :</b></label>
+                            <input type="password" id="pswrd4" placeholder="Enter Trainer's Code" name="code"
+                                required><br />
+                            <p id="par4" class="paragraphErrorMessage"></p>
+                            <button type="submit" class="btn">Find Trainer</button>
+                            <button type="reset" class="btncancel" onclick="closeForm('myForm4','par4')">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+        <!-- Footer with two columns -->
+        <footer>
+            &copy; Copyright 2022 eGabr
+            <div class="row">
+                <div class="column" style="background-color:#aaa;">
+                    <h2>Contact us</h2>
+                    <p>Phone Number : 210 11 11 111</p>
+                    <p>e-mail : info@coding.gr</p>
+                </div>
+                <div class="column" style="background-color:#bbb;">
+                    <h2>Company</h2>
+                    <p>The Company</p>
+                    <p>Cooperations</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
